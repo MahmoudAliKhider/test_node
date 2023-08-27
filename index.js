@@ -8,6 +8,10 @@ const app = express();
 const PORT = process.env.PORT || 7000;
 
 app.use(express.json());
+app.get('/',(req,res,next)=>{
+  res.json({message:"tghjkl...."})
+})
+
 app.use("/api/auth", require("./router/auth"));
 app.use("/api/menu", require("./router/food"));
 

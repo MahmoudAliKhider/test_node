@@ -70,18 +70,18 @@ exports.allowedTo =
   (...roles) =>
   async (req, res, next) => {
     const userId = req.user.id;
-    const userRoleQuery = 'SELECT role FROM users WHERE id = ?';
+    const userRoleQuery = "SELECT role FROM users WHERE id = ?";
 
     db.query(userRoleQuery, [userId], (err, results) => {
       if (err) {
-        console.error('Error retrieving user role:', err);
-        return res.status(500).json({ error: 'An error occurred' });
+        console.error("Error retrieving user role:", err);
+        return res.status(500).json({ error: "An error occurred" });
       }
 
       const userRole = results[0].role;
 
       if (!roles.includes(userRole)) {
-        return next(new ApiError('You are not allowed to access this route', 403));
+        return res.send("You are not allowed to access this route");
       }
 
       next();
