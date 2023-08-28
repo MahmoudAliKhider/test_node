@@ -1,0 +1,9 @@
+{
+  "migrationsDir": "migrations",
+  "driver": "mysql",
+  "user": "root",
+  "password": "",
+  "multipleStatements": true,
+  "host": "127.0.0.1",
+  "database": "foodres"
+}

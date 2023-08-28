@@ -1,0 +1,9 @@
+{
+  "lastRun": null,
+  "migrations": [
+    {
+      "title": "20230828_create_tables.js",
+      "timestamp": null
+    }
+  ]
+}
